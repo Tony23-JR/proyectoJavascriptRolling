@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Proyecto RollingCode Javascript</title>
+    <title>Libros Javascript</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -27,10 +27,10 @@
                     <a class="nav-link" href="..\html\index.html">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Libros<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="..\html\books.html">Libros</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="..\html\users.html">Usuarios</a>
+                    <a class="nav-link" href="#">Usuarios<span class="sr-only">(current)</span></a>
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
@@ -41,51 +41,87 @@
     <div class="container">
     </div>
     <main class="container">
-        <!-- formulario carga libros-->
+        <!-- formulario carga usuario-->
         <form>
             <div class="form-row">
                 <div class="col-md-6 mb-3">
-                    <label for="title">Titulo</label>
-                    <input type="text" class="form-control is-valid" id="title" placeholder="El quijote de la mancha"
-                        required>
+                    <label for="name">Nombre</label>
+                    <input type="text" class="form-control is-valid" id="name" placeholder="Leonel" required>
+                    <!--  <div class="valid-feedback">
+                        Parece que esta bien!
+                    </div> -->
                 </div>
                 <div class="col-md-6 mb-3">
-                    <label for="description">Descripción</label>
-                    <input type="text" class="form-control is-valid" id="description"
-                        placeholder="Lorem, ipsum dolor sit amet consectetur adipisicing elit. ." required>
+                    <label for="lastName">Apellido</label>
+                    <input type="text" class="form-control is-valid" id="lastName" placeholder="Mendez" required>
+                    <!-- <div class="valid-feedback">
+                        Parece que esta bien!
+                    </div> -->
                 </div>
             </div>
             <div class="form-row">
                 <div class="col-md-12 mb-3">
-                    <label for="date">Fecha de creación</label>
-                    <input type="text" class="form-control" id="date" required>
+                    <label for="address">Dirección</label>
+                    <input type="text" class="form-control" id="address" required>
                 </div>
             </div>
             <div class="form-row">
                 <div class="col-md-6 mb-3">
-                    <label for="author">Autor</label>
-                    <input type="text" class="form-control" id="author" placeholder="Garcia Marquez" required>
+                    <label for="country">Pais</label>
+                    <input type="text" class="form-control" id="country" placeholder="Argentina" required>
                 </div>
                 <div class="col-md-3 mb-3">
-                    <label for="genere">Genero</label>
-                    <select class="custom-select" id="genere" placeholder="Novela" required>
-                        <option>Novela</option>
-                        <option>Novela corta</option>
-                        <option>Terror</option>
-                        <option>Juvenil</option>
-                        <option>Aventuras</option>
-                        <option>Romántica</option>
-                        <option>Histórica</option>
-                        <option>Ciencia ficción</option>
-                        <option>Policíaca</option>
-                        <option>Relato corto</option>
+                    <label for="city">Provincia</label>
+                    <select class="custom-select" id="city" placeholder="Tucumán" required>
+                        <option>Buenos Aires</option>
+                        <option>Tierra del Fuego</option>
+                        <option>Catamara</option>
+                        <option>Córdoba</option>
+                        <option>Corrientes</option>
+                        <option>Entre Ríos</option>
+                        <option>Jujuy</option>
+                        <option>Mendoza</option>
+                        <option>La Rioja</option>
+                        <option>Salta</option>
+                        <option>San Juan</option>
+                        <option>San Luis</option>
+                        <option>Santa Fe</option>
+                        <option>Santiago del Estero</option>
+                        <option>Tucumán</option>
+                        <option>Chaco</option>
+                        <option>Chubut</option>
+                        <option>Formosa </option>
+                        <option>Misiones</option>
+                        <option>Neuquén</option>
+                        <option>La Pampa</option>
+                        <option>Río Negro</option>
+                        <option>Santa Cruz</option>
                     </select>
                     <div id="validationServer04Feedback">
-                        Seleccione una genero.
+                        Seleccione una provincia.
                     </div>
                 </div>
+                <div class="col-md-3 mb-3">
+                    <label for="passport">DNI</label>
+                    <input type="number" class="form-control" id="passport" required>
+                </div>
+                <div class="form-group col-6">
+                    <label for="email">E-mail</label>
+                    <input type="email" class="form-control" id="email" required>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="age">Edad</label>
+                    <input type="number" class="form-control" id="age" required>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="type">Tipo de usuario</label>
+                    <select class="custom-select" id="type" placeholder="Administrador" required>
+                        <option>Administrador</option>
+                        <option>Cliente</option>
+                    </select>
+                </div>
             </div>
-            <button class="btn btn-primary" type="button" onclick="createBook()">GUARDAR</button>
+            <button class="btn btn-primary" type="button" onclick="createUser()">GUARDAR</button>
         </form>
         <div>
             <br>
@@ -95,22 +131,27 @@
                 <thead>
                     <tr>
                         <th scope="col">ID</th>
-                        <th scope="col">Título</th>
-                        <th scope="col">Descripción</th>
-                        <th scope="col">Fecha de publicación</th>
-                        <th scope="col">Autor</th>
-                        <th scope="col">Genero</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Apellido</th>
+                        <th scope="col">Tipo</th>
+                        <th scope="col">Edad</th>
+                        <th scope="col">País</th>
+                        <th scope="col">Provincia</th>
+                        <th scope="col">DNI</th>
+                        <th scope="col">Dirección</th>
+                        <th scope="col">Correo electrónico</th>
                     </tr>
                 </thead>
                 <tbody id="tabla">
                 </tbody>
             </table>
         </div>
+
     </main>
 
-    <script src="..\js\books.js"></script>
+    <script src="..\js\users.js"></script>
     <script src="..\js\localStorageManager.js"></script>
-    <script src="..\js\book.models.js"></script>
+    <script src="..\js\user.models.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
