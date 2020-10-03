@@ -6,7 +6,7 @@ function init() {
     books = [];
 }
 
-function createBooks() {
+function createBook() {
     let id = + 1;
     let title = document.getElementById("title").value;
     let description = document.getElementById("description").value;
@@ -23,7 +23,6 @@ function mostrar() {
     var books = managerStorage.get('books');
     let tabla = document.getElementById('tabla');
     tabla.innerHTML = ""
-
     books.map((item, i) => {
         tabla.innerHTML += `<tr>
       <th scope="row">1</th>
@@ -36,8 +35,3 @@ function mostrar() {
     </tr>`
     })
 }
-
-// function delete(id)
-// {
-
-// }

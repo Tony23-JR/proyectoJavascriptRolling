@@ -55,42 +55,29 @@
             </div>
             <div class="form-row">
                 <div class="col-md-6 mb-3">
-                    <label for="country">Autor</label>
-                    <input type="text" class="form-control" id="country" placeholder="Argentina" required>
+                    <label for="author">Autor</label>
+                    <input type="text" class="form-control" id="author" placeholder="Garcia Marquez" required>
                 </div>
                 <div class="col-md-3 mb-3">
-                    <label for="city">Genero</label>
-                    <select class="custom-select" id="city" placeholder="Tucumán" required>
-                        <option>Buenos Aires</option>
-                        <option>Tierra del Fuego</option>
-                        <option>Catamara</option>
-                        <option>Córdoba</option>
-                        <option>Corrientes</option>
-                        <option>Entre Ríos</option>
-                        <option>Jujuy</option>
-                        <option>Mendoza</option>
-                        <option>La Rioja</option>
-                        <option>Salta</option>
-                        <option>San Juan</option>
-                        <option>San Luis</option>
-                        <option>Santa Fe</option>
-                        <option>Santiago del Estero</option>
-                        <option>Tucumán</option>
-                        <option>Chaco</option>
-                        <option>Chubut</option>
-                        <option>Formosa </option>
-                        <option>Misiones</option>
-                        <option>Neuquén</option>
-                        <option>La Pampa</option>
-                        <option>Río Negro</option>
-                        <option>Santa Cruz</option>
+                    <label for="genere">Genero</label>
+                    <select class="custom-select" id="genere" placeholder="Novela" required>
+                        <option>Novela</option>
+                        <option>Novela corta</option>
+                        <option>Terror</option>
+                        <option>Juvenil</option>
+                        <option>Aventuras</option>
+                        <option>Romántica</option>
+                        <option>Histórica</option>
+                        <option>Ciencia ficción</option>
+                        <option>Policíaca</option>
+                        <option>Relato corto</option>
                     </select>
                     <div id="validationServer04Feedback">
                         Seleccione una genero.
                     </div>
                 </div>
             </div>
-            <button class="btn btn-primary" type="button" onclick="createUser()">GUARDAR</button>
+            <button class="btn btn-primary" type="button" onclick="createBook()">GUARDAR</button>
         </form>
         <div>
             <br>
@@ -112,9 +99,9 @@
 
     </main>
 
-    <script src="..\js\index.js"></script>
+    <script src="..\js\books.js"></script>
     <script src="..\js\localStorageManager.js"></script>
-        <script src="..\js\book.models.js"></script>
+    <script src="..\js\book.models.js"></script>
   
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
