@@ -32,37 +32,34 @@
     </div> -->
 
     <main class="container">
-        <!-- formulario carga usuario-->
+        <!-- formulario carga libros-->
         <form>
             <div class="form-row">
                 <div class="col-md-6 mb-3">
-                    <label for="name">Nombre</label>
-                    <input type="text" class="form-control is-valid" id="name" placeholder="Leonel" required>
-                    <!--  <div class="valid-feedback">
-                        Parece que esta bien!
-                    </div> -->
+                    <label for="title">Titulo</label>
+                    <input type="text" class="form-control is-valid" id="title"
+                    placeholder="El quijote de la mancha" required>
                 </div>
                 <div class="col-md-6 mb-3">
-                    <label for="lastName">Apellido</label>
-                    <input type="text" class="form-control is-valid" id="lastName" placeholder="Mendez" required>
-                    <!-- <div class="valid-feedback">
-                        Parece que esta bien!
-                    </div> -->
+                    <label for="description">Descripción</label>
+                    <input type="text" class="form-control is-valid" 
+                    id="description" placeholder="Lorem, ipsum dolor sit amet consectetur adipisicing elit. ." 
+                    required>
                 </div>
             </div>
             <div class="form-row">
                 <div class="col-md-12 mb-3">
-                    <label for="address">Dirección</label>
-                    <input type="text" class="form-control" id="address" required>
+                    <label for="date">Fecha de creación</label>
+                    <input type="text" class="form-control" id="date" required>
                 </div>
             </div>
             <div class="form-row">
                 <div class="col-md-6 mb-3">
-                    <label for="country">Pais</label>
+                    <label for="country">Autor</label>
                     <input type="text" class="form-control" id="country" placeholder="Argentina" required>
                 </div>
                 <div class="col-md-3 mb-3">
-                    <label for="city">Provincia</label>
+                    <label for="city">Genero</label>
                     <select class="custom-select" id="city" placeholder="Tucumán" required>
                         <option>Buenos Aires</option>
                         <option>Tierra del Fuego</option>
@@ -89,27 +86,8 @@
                         <option>Santa Cruz</option>
                     </select>
                     <div id="validationServer04Feedback">
-                        Seleccione una provincia.
+                        Seleccione una genero.
                     </div>
-                </div>
-                <div class="col-md-3 mb-3">
-                    <label for="passport">DNI</label>
-                    <input type="number" class="form-control" id="passport" required>
-                </div>
-                <div class="form-group col-6">
-                    <label for="email">E-mail</label>
-                    <input type="email" class="form-control" id="email" required>
-                </div>
-                <div class="col-md-3 mb-3">
-                    <label for="age">Edad</label>
-                    <input type="number" class="form-control" id="age" required>
-                </div>
-                <div class="col-md-3 mb-3">
-                    <label for="type">Tipo de usuario</label>
-                    <select class="custom-select" id="type" placeholder="Administrador" required>
-                        <option>Administrador</option>
-                        <option>Cliente</option>
-                    </select>
                 </div>
             </div>
             <button class="btn btn-primary" type="button" onclick="createUser()">GUARDAR</button>
@@ -136,8 +114,8 @@
 
     <script src="..\js\index.js"></script>
     <script src="..\js\localStorageManager.js"></script>
-    <script src="..\js\user.models.js"></script>
-      
+        <script src="..\js\book.models.js"></script>
+  
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
