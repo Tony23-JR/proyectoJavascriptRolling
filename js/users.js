@@ -1,9 +1,9 @@
 let users;
 let managerStorage;
 
-function init() {
-  managerStorage = new LocalStorageManager(localStorage);
-  users = [];
+function initUser() {
+    managerStorage = new LocalStorageManager(localStorage);
+    users = [];
 }
 
 function createUser() {
@@ -17,7 +17,8 @@ function createUser() {
   let passport = document.getElementById("passport").value;
   let address = document.getElementById("address").value;
   let email = document.getElementById("email").value;
-  let usuario = new User(id, name, lastName, type, age, country, city, passport, address, email);
+  let password = document.getElementById("password").value;
+  let usuario = new User(id, name, lastName, type, age, country, city, passport, address, email, password);
   users.push(usuario);
   managerStorage.set("users", users);
   mostrar();

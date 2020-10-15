@@ -1,46 +1,38 @@
-let users;
-let managerStorage;
+let managerStorageIndex;
 
-function init() {
-  managerStorage = new LocalStorageManager(localStorage);
-  users = [];
+function initIndex() {
+  managerStorageIndex = new LocalStorageManager(localStorage);
 }
 
-function createUser() {
-  let id = + 1;
-  let name = document.getElementById("name").value;
-  let lastName = document.getElementById("lastName").value;
-  let type = document.getElementById("type").value;
-  let age = document.getElementById("age").value;
-  let country = document.getElementById("country").value;
-  let city = document.getElementById("city").value;
-  let passport = document.getElementById("passport").value;
-  let address = document.getElementById("address").value;
-  let email = document.getElementById("email").value;
-  let usuario = new User(id, name, lastName, type, age, country, city, passport, address, email);
-  users.push(usuario);
-  managerStorage.set("users", users);
-  mostrar();
+function mostrarBooks() {
+  let loginOk = managerStorageIndex.get("logins");
+  managerStorageIndex.set("action", []);
+  managerStorageIndex.set("action", ["../html/book.html"]);
+  if (loginOk.length === 0) {
+    document.location.href = "../html/login.html";
+  }
+  if (loginOk[0].logok) {
+    document.location.href = "../html/book.html";
+  } else {
+    document.location.href = "../html/login.html";
+  }
 }
 
-function mostrar() {
-  var users = managerStorage.get('users');
-  let tabla = document.getElementById('tabla');
-  tabla.innerHTML = ""
+function mostrarUsers() {
+  let loginOk = managerStorageIndex.get("logins");
+  managerStorageIndex.set("action", []);
+  managerStorageIndex.set("action", ["../html/users.html"]);
+  if (loginOk.length === 0) {
+    document.location.href = "../html/login.html";
+  }
+  if (loginOk[0].logok) {
+    document.location.href = "../html/users.html";
+  } else {
+    document.location.href = "../html/login.html";
+  }
+}
 
-  users.map((item, i) => {
-    tabla.innerHTML += `<tr>
-      <th scope="row">1</th>
-      <td>${item.name}</td>
-      <td>${item.lastName}</td>
-      <td>${item.type}</td>
-      <td>${item.age}</td>
-      <td>${item.country}</td>
-      <td>${item.city}</td>
-      <td>${item.passport}</td>
-      <td>${item.address}</td>
-      <td>${item.email}</td>
-      <td class="btn btn-outline-danger" onclick="borrar(${i})">Borrar</td>
-    </tr>`
-  })
+function logout() {
+  managerStorageIndex.set("logins", []);
+  location.reload();
 }
