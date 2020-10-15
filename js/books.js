@@ -15,9 +15,6 @@ function logout() {
 
 function createBook() {
   let id = +1;
-
-
-  
   let title = document.getElementById("title").value;
   let image = document.getElementById("input").files[0].name;
   let description = document.getElementById("description").value;
