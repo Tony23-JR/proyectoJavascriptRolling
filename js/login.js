@@ -22,7 +22,7 @@ function validarUsuario() {
       managerStorageLogin.set("logins", logins);
       let action = managerStorageLogin.get("action");
       if (action.length === 0) {
-        document.location.href = "../html/users.html";
+        document.location.href = "../html/user.html";
       }
       document.location.href = action[0];
     }

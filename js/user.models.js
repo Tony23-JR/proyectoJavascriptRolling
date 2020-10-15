@@ -1,13 +1,13 @@
 class User {
-  constructor(id, name, lastName, type, age, country, city, passport, address, email, password) {
+  constructor(id, name, type, state, passport, age, country, city, address, email,  password) {
     this.id = id;
     this.name = name;
-    this.lastName = lastName;
     this.type = type;
+    this.state = state;
+    this.passport = passport;
     this.age = age;
     this.country = country;
     this.city = city;
-    this.passport = passport;
     this.address = address;
     this.email = email;
     this.password = password;

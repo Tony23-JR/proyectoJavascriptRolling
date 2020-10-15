@@ -9,8 +9,36 @@ function initBook() {
 
 function logout() {
   managerStorageBook.set("logins", []);
-  location.reload();
   document.location.href = "../html/index.html";
+  //location.reload();
+}
+
+function mostrarBooks() {
+  let loginOk = managerStorageBook.get("logins");
+  managerStorageBook.set("action", []);
+  managerStorageBook.set("action", ["../html/book.html"]);
+  if (loginOk.length === 0) {
+    document.location.href = "../html/login.html";
+  }
+  if (loginOk[0].logok) {
+    document.location.href = "../html/book.html";
+  } else {
+    document.location.href = "../html/login.html";
+  }
+}
+
+function mostrarUsers() {
+  let loginOk = managerStorageBook.get("logins");
+  managerStorageBook.set("action", []);
+  managerStorageBook.set("action", ["../html/user.html"]);
+  if (loginOk.length === 0) {
+    document.location.href = "../html/login.html";
+  }
+  if (loginOk[0].logok) {
+    document.location.href = "../html/user.html";
+  } else {
+    document.location.href = "../html/login.html";
+  }
 }
 
 function createBook() {
@@ -117,7 +145,7 @@ function mostrar() {
         <tr>
         <th scope="row">1</th>
         <td>${title}</td>
-        <td><img src="images/books/${image}" id="" width="100" height="100" /></td>
+        <td><img src="../images/books/${image}" id="" width="100" height="100" /></td>
         <td>${description}</td>
         <td>${date}</td>
         <td>${author}</td>
@@ -158,7 +186,8 @@ function mostrar() {
      <div class="modal-body">
      <div class="form-group">
      <label for="title">Titulo</label>
-     <input type="text" class="form-control" id="titleEdit" value="${title}" required onchange="controls()">
+     <input type="text" class="form-control" id="titleEdit" value="${title}" 
+     required onchange="controls()">
    </div>
    <div class="form-group">
      <label for="image">Imagen</label>
@@ -166,18 +195,22 @@ function mostrar() {
    </div>
    <div class="form-group">
      <label for="description">Descripcion</label>
-     <textarea class="form-control" id="descriptionEdit" required onchange="controls()">${description}</textarea>
+     <textarea class="form-control" id="descriptionEdit" required 
+     onchange="controls()">${description}</textarea>
    </div>
    <div class="form-group">
      <label for="date">Fecha de Publicacion</label>
-     <input type="date" class="form-control" id="dateEdit" value="${date}" required onchange="controls()">
+     <input type="date" class="form-control" id="dateEdit" value="${date}" 
+     required onchange="controls()">
    </div>    
    <div class="form-group">
      <label for="author">Autor</label>
-     <input type="text" class="form-control" id="authorEdit" value="${author}" required onchange="controls()">
+     <input type="text" class="form-control" id="authorEdit" value="${author}" 
+     required onchange="controls()">
    </div> 
    <label for="genere">Genero</label>
-   <select class="custom-select" id="genereEdit" value="${genere}" required onchange="controls()">
+   <select class="custom-select" id="genereEdit" value="${genere}" 
+   required onchange="controls()">
        <option>Novela</option>
        <option>Novela corta</option>
        <option>Terror</option>

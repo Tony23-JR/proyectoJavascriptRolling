@@ -1,0 +1,62 @@
+.navbar-light .navbar-brand {
+  color: #fff;
+}
+
+.logotext {
+  font-family: "Russo One", sans-serif;
+}
+
+.navbar-light .navbar-nav .active > .nav-link {
+  color: #000;
+  font-weight: 700;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #fff;
+  font-weight: 700;
+}
+
+.btn-primary {
+  background: #710000;
+  color: #fff;
+  border-color: #710000;
+  border-radius: 15px;
+}
+
+.overlay {
+  background: #000;
+  bottom: 0;
+  left: 0;
+  opacity: 0.6;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 2px;
+}
+
+.card {
+  box-shadow: 0 5px 7px #e0e5e8;
+  margin-bottom: 30px;
+}
+
+.avatar {
+  height: 100px;
+  width: 100px;
+
+  border-radius: 50%;
+  margin-top: 15px;
+}
+
+.footer {
+  background-color: #000;
+}
+
+.footer1 {
+  background-color: #ddd;
+}
+
+@media screen and (max-width: 992px) {
+  .space_login {
+    padding-bottom: 5px;
+  }
+}

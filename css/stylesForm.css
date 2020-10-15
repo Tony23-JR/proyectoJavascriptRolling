@@ -255,9 +255,3 @@ table.table .avatar {
     padding-bottom: 5px;
   }
 }
-
-.formularioLogin {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
