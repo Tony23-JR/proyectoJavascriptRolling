@@ -1,213 +1,186 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 
 <head>
-    <title>Proyecto RollingCode Javascript</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!-- <link rel="stylesheet" href="css\index.css"> -->
-    <link rel="stylesheet" href="../css/estilo.css">
+  <!-- Bootstrap CSS -->
+  <link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+    integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+    integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+
+  <link rel="stylesheet" href="../css/stylesIndex.css">
+  <link rel="stylesheet" href="../css/stylesForm.css">
+
+  <title>Books</title>
 </head>
 
 <body onload="initIndex()">
-    <!-- nabvar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-danger">
-        <div class="container text-center">
-          <a class="navbar-brand logotext" href="#"><img src="../images/libros.png" width="30" height="30" alt="">Libros</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="#">HOME<span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="javascript:mostrarBooks();">LIBROS</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="javascript:mostrarUsers();">USUARIOS</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#Contacto">CONTACTO</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                  aria-haspopup="true" aria-expanded="false">
-                  GENEROS
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="#">NOVELA</a>
-                  <a class="dropdown-item" href="#">DRAMA</a>
-                </div>
-            </ul>
-            <ul class="navbar-nav ml-auto">
-              <li class="nav-item mr-lg-3 space_login">
-                <a class="btn btn-primary btn-sm " href="../html/login.html"></i><i class="far fa-user"></i>INGRESO</a>
-              </li>
-              <li class="nav-item ">
-                <a class="btn btn-primary btn-sm" href="javascript:logout();"></i><i class="far fa-edit"></i>SALIR</a>
-              </li>
-            </ul>
+
+  <!-- header -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-danger">
+    <div class="container text-center">
+      <a class="navbar-brand logotext" href="#"><img src="../images/libros.png" width="30" height="30" alt=""> Books</a>
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="../html/index.html">INICIO</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="javascript:mostrarBooks();">LIBROS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="javascript:mostrarUsers();">USUARIOS</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#container">NOVEDADES</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#footer1">CONTACTO</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav ml-auto  ">
+          <li class="nav-item mr-lg-3 space_login">
+            <a class="btn btn-primary btn-sm " href="../html/login.html"></i><i class="far fa-user"></i> INGRESO</a>
+          </li>
+          <li class="nav-item ">
+            <a class="btn btn-primary btn-sm" href="javascript:logout();"></i><i class="far fa-edit"></i> SALIR</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div id="carouselExampleIndicators" class="carousel slide " data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <div class="overlay"></div>
+        <img class="d-block w-100" src="../images/book1.jpg" alt="First slide">
+      </div>
+      <div class="carousel-item">
+        <div class="overlay"></div>
+        <img class="d-block w-100" src="../images/book2.jpg" alt="Second slide">
+      </div>
+      <div class="carousel-item">
+        <div class="overlay"></div>
+        <img class="d-block w-100" src="../images/book3.jpg" alt="Third slide">
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+  <!--  end header -->
+  <!-- content -->
+  <div class="text-center mt-sm-5">
+    <h2>Novedades</h2>
+  </div>
+  <div class="container" id="container">
+    <div id="mostrarCards">
+    </div>
+  </div>
+  <br>
+  <div class="footer1" id="footer1">
+    <br>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title text-danger text-center">ADDRESS</h5>
+              <p class="card-text text-center">New York, NY 10012, US</p>
+              <p class="card-text text-center">info@books.com</p>
+            </div>
+            <div class="card-footer ">
+              <p class="text-danger text-center"><i class="fas fa-phone-volume"></i> + 01 234 567 88</p>
+              <p class="text-danger text-center"><i class="fas fa-phone-volume"></i> + 01 234 567 89</p>
+            </div>
           </div>
         </div>
-      </nav>
-    <div class="container">
+        <div class="col-md-6">
+          <div class="card">
+            <div class="text-center">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title text-danger text-center">FOLLOW US</h5>
+              <p class="card-text text-center"></p>
+            </div>
+            <div class="card-footer ">
+              <p class=" text-center"><a class="btn-floating btn-lg btn-fb" type="button" role="button"><i
+                    class="fab fa-facebook-f"></i></a>
+                <a class="btn-floating btn-lg btn-ins" type="button" role="button"><i class="fab fa-instagram"></i></a>
+                <a class="btn-floating btn-lg btn-whatsapp" type="button" role="button"><i
+                    class="fab fa-whatsapp"></i></a></p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <main class="container">
-        <div class="card-group">
-            <div class="card">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This card has supporting text below as a natural lead-in to
-                        additional content.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                </div>
-            </div>
-            <div class="card">
-                <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                    <h5 class="card-title">Card title</h5>
-                    <p class="card-text">This is a wider card with supporting text below as a natural
-                        lead-in to additional content. This card has even longer content than the first
-                        to show that equal height action.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                </div>
-            </div>
-        </div>
-    </main>
-    
+    <!-- end content -->
+    <!-- footer -->
+    <div class="footer py-3">
+      <div class="container">
+        <p class="text-center text-white">© Copyright 2020 Libros. Todos los derechos reservados
+        <p>
+      </div>
+    </div>
+    <!-- end footer -->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-        crossorigin="anonymous"></script>
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-        crossorigin="anonymous"></script>
-        <script src="../js/index.js"></script>
-        <script src="../js/localStorageManager.js"></script>
-    <!-- </body> -->
-    <!-- Footer -->
-    <footer class="page-footer font-small mdb-color lighten-3 pt-4">
-        <!-- Footer Links -->
-        <div class="container text-center text-md-left">
-            <!-- Grid row -->
-            <div class="row">
-                <!-- Grid column -->
-                <div class="col-md-4 col-lg-3 mr-auto my-md-4 my-0 mt-4 mb-1">
-                    <!-- Content -->
-                    <h5 class="font-weight-bold text-uppercase mb-4">Footer Content</h5>
-                    <p>Here you can use rows and columns to organize your footer content.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit amet numquam iure provident
-                        voluptate
-                        esse
-                        quasi, veritatis totam voluptas nostrum.</p>
-                </div>
-                <!-- Grid column -->
-                <hr class="clearfix w-100 d-md-none">
-                <!-- Grid column -->
-                <div class="col-md-2 col-lg-2 mx-auto my-md-4 my-0 mt-4 mb-1">
-                    <!-- Links -->
-                    <h5 class="font-weight-bold text-uppercase mb-4">About</h5>
-                    <ul class="list-unstyled">
-                        <li>
-                            <p>
-                                <a href="#!">PROJECTS</a>
-                            </p>
-                        </li>
-                        <li>
-                            <p>
-                                <a href="#!">ABOUT US</a>
-                            </p>
-                        </li>
-                        <li>
-                            <p>
-                                <a href="#!">BLOG</a>
-                            </p>
-                        </li>
-                        <li>
-                            <p>
-                                <a href="#!">AWARDS</a>
-                            </p>
-                        </li>
-                    </ul>
-                </div>
-                <!-- Grid column -->
-                <hr class="clearfix w-100 d-md-none">
-                <!-- Grid column -->
-                <div class="col-md-4 col-lg-3 mx-auto my-md-4 my-0 mt-4 mb-1">
-                    <!-- Contact details -->
-                    <h5 class="font-weight-bold text-uppercase mb-4">Address</h5>
-                    <ul class="list-unstyled">
-                        <li>
-                            <p>
-                                <i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
-                        </li>
-                        <li>
-                            <p>
-                                <i class="fas fa-envelope mr-3"></i> info@example.com</p>
-                        </li>
-                        <li>
-                            <p>
-                                <i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
-                        </li>
-                        <li>
-                            <p>
-                                <i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
-                        </li>
-                    </ul>
-                </div>
-                <!-- Grid column -->
-                <hr class="clearfix w-100 d-md-none">
-                <!-- Grid column -->
-                <div class="col-md-2 col-lg-2 text-center mx-auto my-4">
-                    <!-- Social buttons -->
-                    <h5 class="font-weight-bold text-uppercase mb-4">Follow Us</h5>
-                    <!-- Facebook -->
-                    <a type="button" class="btn-floating btn-fb">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <!-- Twitter -->
-                    <a type="button" class="btn-floating btn-tw">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <!-- Google +-->
-                    <a type="button" class="btn-floating btn-gplus">
-                        <i class="fab fa-google-plus-g"></i>
-                    </a>
-                    <!-- Dribbble -->
-                    <a type="button" class="btn-floating btn-dribbble">
-                        <i class="fab fa-dribbble"></i>
-                    </a>
-                </div>
-                <!-- Grid column -->
-            </div>
-            <!-- Grid row -->
-        </div>
-        <!-- Footer Links -->
-        <!-- Copyright -->
-        <div class="footer-copyright text-center py-3">© 2020 Copyright:
-            <a href=""> MDBootstrap.com</a>
-        </div>
-        <!-- Copyright -->
-    </footer>
-    <!-- Footer -->
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../js/index.js"></script>
+    <script type="text/javascript" src="../js/localStorageManager.js"></script>
+    <script type="text/javascript" src="../js/book.models.js"></script>
+    <script>
+      //Cuando cargue la página completamente
+      $(document).ready(function () {
+        //Creamos un evento click para el botón
+        $("#footer1").click(function (evento) {
+          //Funcionalidad para que vaya arriba lentamente
+          $("html,body").animate({ scrollTop: 0 }, "slow");
+        });
+      });
+      //Cuando cargue la página completamente
+      $(document).ready(function () {
+        //Creamos un evento click para el botón
+        $("#container").click(function (evento) {
+          //Funcionalidad para que vaya arriba lentamente
+          $("html,body").animate({ scrollTop: 0 }, "slow");
+        });
+      });
+    </script>
+</body>
 
 </html>
